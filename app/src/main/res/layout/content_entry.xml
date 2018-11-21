@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    android:orientation="vertical">
+
+    <!-- TODO: this is where entries will be made -->
+
+    <TextView
+        android:id="@+id/text_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_date"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_day"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/hint_day"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintEnd_toStartOf="@+id/text_time"
+        app:layout_constraintLeft_toRightOf="@id/text_date"
+        app:layout_constraintRight_toLeftOf="@id/text_time"
+        app:layout_constraintStart_toEndOf="@+id/text_date"
+        app:layout_constraintTop_toTopOf="@+id/text_date"
+        app:layout_constraintVertical_chainStyle="spread_inside" />
+
+    <TextView
+        android:id="@+id/text_month_year"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_month_year"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBottom_toBottomOf="@+id/text_date"
+        app:layout_constraintEnd_toEndOf="@+id/text_day"
+        app:layout_constraintStart_toStartOf="@+id/text_day"
+        app:layout_constraintTop_toBottomOf="@+id/text_day" />
+
+    <TextView
+        android:id="@+id/text_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.111"
+        app:layout_constraintLeft_toRightOf="@id/text_day"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_day"
+        app:layout_constraintTop_toTopOf="@+id/text_day" />
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/hint_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+        app:layout_constraintEnd_toEndOf="@+id/text_time"
+        app:layout_constraintStart_toStartOf="@+id/text_date"
+        app:layout_constraintTop_toBottomOf="@+id/text_month_year" />
+
+    <TextView
+        android:id="@+id/text_entry"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/hint_note"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        app:layout_constraintBottom_toTopOf="@id/text_category"
+        app:layout_constraintEnd_toEndOf="@+id/text_title"
+        app:layout_constraintStart_toStartOf="@+id/text_title"
+        app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+    <TextView
+        android:id="@+id/text_category"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Category"
+        app:layout_constraintBottom_toTopOf="@+id/text_tags"
+        app:layout_constraintEnd_toEndOf="@+id/text_entry"
+        app:layout_constraintStart_toStartOf="@+id/text_entry"
+        app:layout_constraintTop_toBottomOf="@+id/text_entry" />
+
+    <TextView
+        android:id="@+id/text_tags"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Tags"
+        app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+        app:layout_constraintEnd_toEndOf="@+id/text_category"
+        app:layout_constraintStart_toStartOf="@+id/text_category" />
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/text_tags"
+        app:layout_constraintStart_toStartOf="@+id/text_tags" />
+
+    <!-- TODO: convert rating bar to moods: love, rad, good, meh, bad, awful, angry-->
+
+</android.support.constraint.ConstraintLayout>

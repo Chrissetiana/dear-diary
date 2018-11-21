@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- TODO: divide into lower and upper menu -->
+
+    <item
+        android:id="@+id/menu_save"
+        android:icon="@android:drawable/ic_menu_save"
+        android:title="@string/menu_save"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_cancel"
+        android:icon="@android:drawable/ic_menu_revert"
+        android:title="@string/menu_cancel"
+        app:showAsAction="always|withText" />
+    <item
+        android:id="@+id/menu_share"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title="@string/menu_share"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/menu_attach"
+        android:title="@string/menu_attach"
+        app:showAsAction="ifRoom" />
+</menu>
